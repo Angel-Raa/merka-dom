@@ -9,7 +9,10 @@ function App() {
   const [open, setOpen] = useState<boolean>(false);
   return (
     <ThemeProvider theme={theme}>
-      <Container>
+      <Container
+        className={`
+        ${open ? "active" : ""} `}
+      >
         <GlobalStyles />
 
         <section className="content-sidebar">
@@ -27,6 +30,9 @@ function App() {
 export default App;
 
 const Container = styled.main`
+  transition: 0.1s ease-in-out;
+
+  color: ${(props) => props.theme.text};
   min-height: 100vh; // Asegura que el grid ocupe toda la altura de la ventana
   display: grid;
   grid-template-columns: 1fr;
@@ -44,6 +50,9 @@ const Container = styled.main`
   }
   @media ${Device.tablet} {
     grid-template-columns: 88px 1fr;
+    &.active {
+      grid-template-columns: 260px 1fr;
+    }
     .content-sidebar {
       display: initial;
       height: 100vh; // Sidebar ocupa toda la altura en pantallas grandes

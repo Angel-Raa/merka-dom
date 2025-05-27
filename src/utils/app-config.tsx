@@ -65,7 +65,8 @@ export const themeOptions = [
   {
     icon: <Sun size={18} />,
     label: "Claro",
-    value: "light",
+    value: "light"
+    
   },
   {
     icon: <Moon size={18} />,
