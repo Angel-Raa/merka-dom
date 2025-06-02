@@ -2,8 +2,12 @@ import styled from "styled-components";
 import { InputText, SaveButton, Title, Separator, Footer } from "../..";
 import { BsGoogle } from "react-icons/bs";
 import { Device } from "../../lib/style/breack-points";
+import { useAuthStore } from "../../lib/store/auth/auth-store";
 
 export function Login() {
+  // Remove or use useAuthStore with a selector if needed, e.g.:
+  // const value = useAuthStore(state => state.value);
+  const login = useAuthStore((state) => state.login);
   return (
     <Container>
       <div className="card">
@@ -39,6 +43,8 @@ export function Login() {
           <Separator color="#1CB0F6">
           </Separator>
           <SaveButton
+          onClick={login}
+          
             bgcolor={"#DB4437"}
             color={"255,255,255"}
             width={"100%"}
