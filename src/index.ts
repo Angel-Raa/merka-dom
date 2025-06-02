@@ -8,6 +8,11 @@ export * from "./page/auth/Login";
 
 // Components
 export { Sidebar } from "./components/shared/sidebar/Sidebar";
+export { Title } from "./components/shared/Title";
+export { InputText } from "./components/form/InputText";
+export { SaveButton } from "./components/shared/SaveButton";
+export { Icono } from "./components/shared/Icono";
+export { Separator } from "./components/shared/Separator";
 
 // store
 export { useThemeStore } from "./lib/store/ThemeStore";
