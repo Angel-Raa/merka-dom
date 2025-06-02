@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { InputText, SaveButton, Title, Separator } from "../..";
+import { InputText, SaveButton, Title, Separator, Footer } from "../..";
 import { BsGoogle } from "react-icons/bs";
 import { Device } from "../../lib/style/breack-points";
 
@@ -36,8 +36,7 @@ export function Login() {
             width={"100%"}
             icon={<i className="fa fa-sign-in" aria-hidden="true"></i>}
           ></SaveButton>
-          <Separator>
-            <span>o</span>
+          <Separator color="#1CB0F6">
           </Separator>
           <SaveButton
             bgcolor={"#DB4437"}
@@ -47,21 +46,23 @@ export function Login() {
           ></SaveButton>
         </form>
       </div>
+      <Footer />
     </Container>
   );
 }
 const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  background-color: var(--background-color);
+  min-height: 100vh;
   text-align: center;
+  flex-direction: column;
 
   .card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px auto;
     width: 100%;
     @media ${Device.tablet} {
       width: 400px;

@@ -13,6 +13,6 @@ export { InputText } from "./components/form/InputText";
 export { SaveButton } from "./components/shared/SaveButton";
 export { Icono } from "./components/shared/Icono";
 export { Separator } from "./components/shared/Separator";
-
+export { Footer } from "./components/shared/Footer";
 // store
 export { useThemeStore } from "./lib/store/ThemeStore";
