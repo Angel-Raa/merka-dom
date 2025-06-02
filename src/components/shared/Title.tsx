@@ -20,6 +20,7 @@ const TitleContainer = styled.span`
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 0.5rem;
+  padding-bottom: 15px;
   text-align: center;
   @media (max-width: 768px) {
     font-size: 1.25rem;

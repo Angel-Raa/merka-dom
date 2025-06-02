@@ -1,54 +1,52 @@
-# React + TypeScript + Vite
+# MERKA-DOM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MERKA-DOM es una plataforma integral para la gestión y administración de comercios, diseñada para optimizar procesos de ventas, inventario y atención al cliente. Su objetivo es digitalizar y facilitar la operación diaria de pequeños y medianos negocios, permitiendo un control eficiente y centralizado de todas las actividades comerciales.
 
-Currently, two official plugins are available:
+## Características principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Gestión de inventario:** Controla el stock de productos en tiempo real, con alertas de bajo inventario y reportes automáticos.
+- **Administración de ventas:** Registra ventas, genera facturas y realiza seguimiento de pedidos de manera sencilla.
+- **Gestión de clientes:** Almacena información de clientes, historial de compras y preferencias para mejorar la atención.
+- **Reportes y analíticas:** Obtén informes detallados sobre ventas, productos más vendidos y desempeño del negocio.
+- **Interfaz intuitiva:** Fácil de usar, accesible desde cualquier dispositivo con conexión a internet.
 
-## Expanding the ESLint configuration
+## Stack tecnológico
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React:**
+- **Supabase:**
+- **Bunjs:**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Instalación
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clona el repositorio:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  ```bash
+  git clone 
+  ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2.Ingresa al directorio del proyecto:
+
+  ```bash
+  cd merka-dom
+  ```
+
+3.Instala las dependencias:
+
+  ```bash
+
+  npm install
+  ```
+
+4.Inicia la aplicación:
+
+  ```bash
+  npm start
+  ```
+
+## Contribución
+
+Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull request para sugerencias y mejoras.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT.
