@@ -1,20 +1,5 @@
 import "styled-components";
 
-declare module "styled-components" {
-  export interface DefaultTheme {
-    text: string;
-    bg: string;
-    bgAlpha: string;
-    bg3: string;
-    bg4: string;
-    bg5: string;
-    bgtgderecha: string;
-    colorScroll: string;
-    logorotate: string;
-    // add any other theme properties you use
-  }
-}
-
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { ToggleTheme } from "./ToggleTheme";
@@ -222,3 +207,18 @@ const Divider = styled.div`
   background: ${(props) => props.theme.bg4};
   margin: ${() => v.lgSpacing} 0;
 `;
+
+declare module "styled-components" {
+  export interface DefaultTheme {
+    text: string;
+    bg: string;
+    bgAlpha: string;
+    bg3: string;
+    bg4: string;
+    bg5: string;
+    bgtgderecha: string;
+    colorScroll: string;
+    logorotate: string;
+    // add any other theme properties you use
+  }
+}

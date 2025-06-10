@@ -3,26 +3,29 @@ import { GlobalStyles, Sidebar, useThemeStore } from "./index";
 import { Device } from "./lib/style/breack-points";
 import { Router } from "./index";
 import { useState } from "react";
+import { AuthContextProvider } from "./context/auth-context";
 
 function App() {
   const { theme } = useThemeStore();
   const [open, setOpen] = useState<boolean>(false);
   return (
     <ThemeProvider theme={theme}>
-      <Container
-        className={`
+      <AuthContextProvider>
+        <Container
+          className={`
         ${open ? "active" : ""} `}
-      >
-        <GlobalStyles />
+        >
+          <GlobalStyles />
 
-        <section className="content-sidebar">
-          <Sidebar state={open} setState={setOpen} />
-        </section>
-        <section className="content-menu"></section>
-        <section className="content-routers">
-          <Router />
-        </section>
-      </Container>
+          <section className="content-sidebar">
+            <Sidebar state={open} setState={setOpen} />
+          </section>
+          <section className="content-menu"></section>
+          <section className="content-routers">
+            <Router />
+          </section>
+        </Container>
+      </AuthContextProvider>
     </ThemeProvider>
   );
 }

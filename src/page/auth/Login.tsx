@@ -5,9 +5,8 @@ import { Device } from "../../lib/style/breack-points";
 import { useAuthStore } from "../../lib/store/auth/auth-store";
 
 export function Login() {
-  // Remove or use useAuthStore with a selector if needed, e.g.:
-  // const value = useAuthStore(state => state.value);
   const login = useAuthStore((state) => state.login);
+  
   return (
     <Container>
       <div className="card">
@@ -40,11 +39,9 @@ export function Login() {
             width={"100%"}
             icon={<i className="fa fa-sign-in" aria-hidden="true"></i>}
           ></SaveButton>
-          <Separator color="#1CB0F6">
-          </Separator>
+          <Separator color="#1CB0F6"></Separator>
           <SaveButton
-          onClick={login}
-          
+            onClick={login}
             bgcolor={"#DB4437"}
             color={"255,255,255"}
             width={"100%"}

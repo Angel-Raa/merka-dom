@@ -1,8 +1,6 @@
 import { create } from "zustand";
 import { supabase } from "../../supabase/supabase";
 
-
-
 // Define la interfaz para el estado
 interface AuthStore {
   isAuthenticated: boolean;
