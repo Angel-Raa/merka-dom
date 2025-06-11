@@ -1,23 +1,40 @@
 import styled from 'styled-components';
 
-// Opción 1: Estilo básico con Styled Components
-const LogoContainer = styled.div`
+interface LogoContainerProps {
+  gap?: string;
+}
+
+const LogoContainer = styled.div<LogoContainerProps>`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: ${({ gap }) => gap || '8px'};
 `;
 
-const LogoImage = styled.img`
-  height: 36px; // Ajusta según necesites
+interface LogoImageProps {
+  height?: string;
+}
+
+const LogoImage = styled.img<LogoImageProps>`
+  height: ${({ height }) => height || '36px'};
   width: auto;
 `;
 
+interface LogoProps {
+  src?: string;
+  height?: string;
+  gap?: string;
+  alt?: string;
+}
 
-export const Logo = () => {
+export const Logo: React.FC<LogoProps> = ({
+  src = 'https://i.ibb.co/1Y7VrxWS/checkout.png',
+  height,
+  gap,
+  alt = 'Logo',
+}) => {
   return (
-    <LogoContainer>
-      <LogoImage src={'https://i.ibb.co/1Y7VrxWS/checkout.png'} alt="Logo Checkout" />
+    <LogoContainer gap={gap}>
+      <LogoImage src={src} alt={alt} height={height} />
     </LogoContainer>
   );
 };
-

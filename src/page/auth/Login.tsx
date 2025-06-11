@@ -11,7 +11,7 @@ export function Login() {
   return (
     <Container>
       <div className="card">
-        <Logo/>
+        <Logo height="80" alt="Checkout Logo"/>
         <Title>Ingresar</Title>
         <form>
           <InputText>
