@@ -3,6 +3,7 @@ import { InputText, SaveButton, Title, Separator, Footer } from "../..";
 import { BsGoogle } from "react-icons/bs";
 import { Device } from "../../lib/style/breack-points";
 import { useAuthStore } from "../../lib/store/auth/auth-store";
+import { Logo } from "../../components/shared/Logo";
 
 export function Login() {
   const login = useAuthStore((state) => state.login);
@@ -10,6 +11,7 @@ export function Login() {
   return (
     <Container>
       <div className="card">
+        <Logo/>
         <Title>Ingresar</Title>
         <form>
           <InputText>
